@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Relational Database.md",
+            "file": "Database/SQL.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Relational Database.md",
+                "file": "Database/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,12 +86,12 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Database/Relational Database.md",
     "Database/SQL.md",
-    "Database/Screenshot from SQL tutorial.png.png",
-    "Database/MySQL.md",
-    "Screenshot from SQL tutorial.png.png",
     "Database/Untitled.md",
+    "Database/MySQL.md",
+    "Database/Relational Database.md",
+    "Database/Screenshot from SQL tutorial.png.png",
+    "Screenshot from SQL tutorial.png.png",
     "Screen Shot 2021-01-17 at 2.26.24 PM.png",
     "Untitled.md"
   ]

@@ -87,11 +87,14 @@ ALTER TABLE student DROP COLUMN gpa;
 CREATE TABLE student (
 	student_id INT PRIMARY KEY,
 	name VARCHAR(20) NOT NULL,
-	major VARCHAR(20) UNIQUE
+	major VARCHAR(20) DEFAULT 'undecided'
 	);
 ```
 - NOT NULL - cannot be empty / null
 - UNIQUE - has to be unique
+- DEFAULT - default value
+- AUTO_INCREMENT - data automatically incremented by 1 
+
 <hr>
 
 ## Working with Data
@@ -106,7 +109,185 @@ If you didn't want to fill in data for all columns:
 INSERT INTO student(student_id, name) VALUES(2, 'Kate');
 ```
 
-#### View
+#### Updating Rows
+
+To update:
+```sql
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology';
+```
+
+To update multiple values:
+```sql
+UPDATE student
+SET name = 'Tom', major = 'Bio'
+WHERE student_id = 1;
+```
+
+To update all values in a column:
+```sql
+UPDATE student
+SET major = 'undecided'
+```
+
+You can also use OR logic or AND logic:
+```sql
+UPDATE student
+SET major = 'Biochemistry'
+WHERE major = 'Biology' OR 'Chemistry';
+```
+
+### Deleting Rows
+
+To delete all rows:
+```sql
+DELETE FROM student
+```
+
+You can also be more specific:
+
+```sql
+DELETE FROM student
+WHERE name = 'TOM' AND major = 'Undecided'
+```
+
+<hr>
+
+## Writing Queries
+
+#### Getting data
 ```sql
 SELECT * FROM student;
 ```
+
+To select values from specific columns:
+```sql
+SELECT name, major FROM student;
+```
+
+You can also specify the table:
+```sql
+SELECT student.name, student.major
+```
+
+#### Ordering
+```sql
+SELECT student.name, student.major
+FROM student
+ORDER BY name DESC;
+```
+By default ordering is in ascending order (ASC), but you use descending order (DESC).
+
+You can also order by columns:
+```sql 
+ORDER BY major, student_id DESC;
+```
+
+#### Filtering
+
+You can use: <, >, <=, >=, <> (not equal to), AND, OR, NOT, IN
+
+```sql
+SELECT *
+FROM student
+WHERE major <> 'Biology' OR name IN ('Claire', 'Kate', 'Mike');
+```
+
+#### Limiting
+gives back specific number of rows.
+```sql
+LIMIT 2;
+```
+
+#### Distinct
+```sql
+SELECT DISTINCT Country from Customers;
+```
+
+#### Combining AND, OR and NOT
+```sql
+WHERE Country = 'Germany' AND (City='Berlin' OR City='Munchen');
+```
+```sql
+WHERE NOT Country = 'Germany' AND NOT Country = 'USA'
+```
+
+#### Insert Into
+```sql
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)  
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+```
+
+#### LIKE
+To select all customers with a CustomerName starting with "a":
+```sql
+SELECT * FROM Customers  
+WHERE CustomerName LIKE 'a%';
+```
+
+#### ALIASES/AS
+```sql
+SELECT column_name AS alias_name
+FROM table_name;
+```
+
+<hr>
+
+## SQL Functions
+#### COUNT
+```sql
+SELECT COUNT(emp_id) FROM employee;
+```
+#### AVG
+```sql
+SELECT AVG(salary) FROM employee;
+```
+#### SUM
+```sql
+SELECT SUM(salary) FROM employee;
+```
+
+#### Aggregation (SUM and GROUP BY)
+```sql
+SELECT COUNT(sex), sex FROM employee
+GROUP BY sex;
+```
+
+<hr>
+
+## Wild Card
+= a way of defining different patterns to match data to
+```sql
+-- Find any client who are an LLC
+SELECT * 
+FROM client
+WHERE client_name LIKE '%LLC';
+```
+
+- % = any number of characters
+- _ = one character
+
+```sql
+--find any branch suppliers who are in the label business
+SELECT * from branch_supplier
+where supplier_name LIKE '%Label%';
+
+--find any employee born in October
+SELECT * from employee
+WHERE birth_day LIKE '____-10%';
+```
+
+## Union
+= special SQL operator we can use to combine multiple select statements
+```sql
+--find all employee and branch names 
+SELECT first_name FROM employee
+UNION
+SELECT branch_name FROM branch
+UNION
+SELECT client_name FROM client;
+```
+- the unioned tables need to have same number of columns retrieved
+- they also need similar data types (like strings)
+- the first select statement will become the column name, unless you use AS
