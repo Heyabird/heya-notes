@@ -278,6 +278,8 @@ SELECT * from employee
 WHERE birth_day LIKE '____-10%';
 ```
 
+<hr>
+
 ## Union
 = special SQL operator we can use to combine multiple select statements
 ```sql
@@ -291,3 +293,14 @@ SELECT client_name FROM client;
 - the unioned tables need to have same number of columns retrieved
 - they also need similar data types (like strings)
 - the first select statement will become the column name, unless you use AS
+
+<hr>
+
+## Join
+
+![[SQL Joins.png]]
+```sql
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee JOIN branch
+ON employee.emp_id = branch.mgr_id
+```
