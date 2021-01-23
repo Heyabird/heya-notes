@@ -15,5 +15,10 @@ and create db:
 create database heya;
 ```
 
+to start MySQL server:
+```
+mysql.server start
+```
+
 #### Use POPSQL or Terminal to work with db.
 

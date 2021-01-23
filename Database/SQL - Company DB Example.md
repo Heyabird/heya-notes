@@ -28,7 +28,7 @@ DESCRIBE branch;
 ALTER TABLE employee
 ADD FOREIGN KEY(branch_id)
 REFERENCES branch(branch_id)
-ON DELETE SET NULL;  
+ON DELETE SET NULL; -- Specifies that the child data is **set** to **NULL** when the parent data is **deleted**. The child data is NOT **deleted**.
 
 ALTER TABLE employee
 ADD FOREIGN KEY(super_id)

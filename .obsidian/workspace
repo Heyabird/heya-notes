@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "82e8693e78d3a5dc",
+        "id": "fe5d989d507c3418",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/SQL.md",
+            "file": "System Design.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "System Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "System Design.md",
+    "Caching.md",
+    "Untitled.md",
     "Database/SQL.md",
     "Database/SQL - Company DB Example.md",
     "Helpful Screenshots/SQL Joins.png",
     "Helpful Screenshots/Screenshot from SQL tutorial.png.png",
-    "Database/Untitled.md",
     "Database/MySQL.md",
-    "Database/Relational Database.md",
-    "Database/Screenshot from SQL tutorial.png.png",
-    "Screenshot from SQL tutorial.png.png",
-    "Screen Shot 2021-01-17 at 2.26.24 PM.png"
+    "Database/Untitled.md",
+    "Database/Relational Database.md"
   ]
 }
