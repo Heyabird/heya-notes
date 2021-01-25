@@ -248,12 +248,14 @@ SELECT AVG(salary) FROM employee;
 SELECT SUM(salary) FROM employee;
 ```
 
-#### Aggregation (SUM and GROUP BY)
+#### Aggregation (GROUP BY)
 ```sql
 SELECT COUNT(sex), sex FROM employee
 GROUP BY sex;
 ```
 
+- SUM and GROUP BY example:
+![[Screen Shot 2021-01-24 at 3.33.46 PM.png]]
 <hr>
 
 ## Wild Card
@@ -305,6 +307,10 @@ FROM employee JOIN branch
 ON employee.emp_id = branch.mgr_id
 ```
 
+- self join - 
+	- to get away with ambiguous table names, use alias (in this case, 'buddies')
+	![[Screen Shot 2021-01-24 at 3.41.25 PM.png]]
+
 <hr>
 
 ## Sub/Nested Query
@@ -314,3 +320,14 @@ WHERE ID IN (SELECT ID
 	FROM CUSTOMERS
 	WHERE SALARY > 4500);
 ```
+
+## If
+```sql
+SELECT OrderID, Quantity, IF(Quantity>10, "MORE", "LESS")
+FROM OrderDetails;
+```
+- return MORE f the condition is TRUE, or LESS if the condition is FALSE.
+![[SQL IF statement.png]]
+
+<hr>
+- Khan Academy SQL practice: https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/pt/combining-multiple-joins

@@ -20,7 +20,54 @@
 ## Memcached
 key - value store
 
-Operations
+Main operations
 - set (key, value)
 - get (key) -> value
 - delete (key)
+
+src: https://www.youtube.com/watch?v=7MLXuG83Fsw&t=145s
+- to set up:
+	```
+	brew install memcache
+	brew install telnet
+	telnet localhost 11211
+	```
+
+- set a key-value pair (foo: bar) with params: 0 flags, 3600 sec expiration time, 3 byes
+	```
+	set foo 0 3600 3
+	bar
+	```
+
+- to delete:
+	```
+	delete foo
+	```
+
+- 'set' command will replace, 'add' won't.
+	```
+	add num 0 3600 2
+	50
+	```
+
+- append:
+	```
+	append num 0 3600 2
+	25
+	```
+--> get num will now return 5025.
+- prepend
+- replace
+	```
+	replace num 0 3600 2
+	40
+	```
+- increment (incr) / decrement (decr)
+	```
+	incr num 2
+	```
+--> 42
+- ```flush_all``` gets rid of everything
+
+```quit``` out of telnet and ```brew services restart memcached``` will restart everything
+

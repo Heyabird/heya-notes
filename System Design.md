@@ -3,7 +3,7 @@ src: https://www.freecodecamp.org/news/systems-design-for-interviews/#section-1-
 1. Networks and Protocols
 	- IP (Internet Protocol)
 	- TCP (Transmission Control Protocol)
-	- HTTP (Hype Text Transfer Protocol)
+	- HTTP (Hyper Text Transfer Protocol)
 2. Storage, Latency, and Throughput
 	- Storage 
 			- **Memory** -  more temporary. When device or server restarts, the data usually will be lost. Faster and less expensive.
@@ -23,3 +23,4 @@ src: https://www.freecodecamp.org/news/systems-design-for-interviews/#section-1-
 	> "So, in a forward proxy, the server won't know that the client's request and its response are traveling through a proxy, and in a reverse proxy the client won't know that the request and response are routed through a proxy."
 	- Your reverse proxy can be delegated a lot of tasks (gatekeeping, screening, loadbalancing, etc), assisting your main server.
 6. Load Balancing
+	- balancing and allocating the request load to maintain availability and throughput

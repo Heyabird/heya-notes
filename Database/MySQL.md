@@ -22,3 +22,6 @@ mysql.server start
 
 #### Use POPSQL or Terminal to work with db.
 
+<hr>
+
+MySQL cheatsheet: https://overapi.com/mysql
