@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/SQL.md",
-            "mode": "source"
+            "file": "Rails/Active Record.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "Rails/Active Record.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Rails/Active Record.md",
+    "System Design/Caching.md",
+    "Rails/Untitled.md",
+    "System Design/System Design.md",
     "Database/SQL.md",
     "Database/MySQL.md",
     "Screen Shot 2021-01-24 at 12.35.11 PM.png",
     "Caching.md",
     "System Design.md",
-    "Untitled.md",
-    "Database/SQL - Company DB Example.md",
-    "Helpful Screenshots/SQL Joins.png",
-    "Helpful Screenshots/Screenshot from SQL tutorial.png.png",
-    "Database/Untitled.md"
+    "Untitled.md"
   ]
 }
