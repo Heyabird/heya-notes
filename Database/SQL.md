@@ -248,7 +248,7 @@ SELECT AVG(salary) FROM employee;
 SELECT SUM(salary) FROM employee;
 ```
 
-#### Aggregation (GROUP BY)
+#### GROUP BY
 ```sql
 SELECT COUNT(sex), sex FROM employee
 GROUP BY sex;
@@ -257,6 +257,8 @@ GROUP BY sex;
 - SUM and GROUP BY example:
 ![[Screen Shot 2021-01-24 at 3.33.46 PM.png]]
 <hr>
+- MIN, MAX
+- HAVING = WHERE for aggregates
 
 ## Wild Card
 = a way of defining different patterns to match data to
@@ -320,6 +322,7 @@ WHERE ID IN (SELECT ID
 	FROM CUSTOMERS
 	WHERE SALARY > 4500);
 ```
+![[Screen Shot 2021-01-25 at 9.24.50 PM.png]]
 
 ## If
 ```sql

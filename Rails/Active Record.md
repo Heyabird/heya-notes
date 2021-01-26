@@ -11,6 +11,7 @@
 	2.  **migrate** - create a database table called “users” that has the appropriate columns. This is done using a migration file and then running the migration.
 		- migration = a script that tells Rails how you want to set up or change a database.
 		- If you want to just do this step to modify rather than create new db, run `$ rails generate migration NameYourMigration`.
+		- To revert migration you can just run `$ rails db:rollback`, edit the script file, and remigrate.
 
 <hr>
 #### ORM
@@ -28,3 +29,27 @@ u = User.create(name: "Sven", email: "sven@theodinproject.com")
 
 
 [^1]: the Odin Project - Active Record Basics (https://www.theodinproject.com/courses/ruby-on-rails/lessons/active-record-basics-ruby-on-rails)
+
+
+<hr>
+#### Basic Validations
+
+- there are 3 layers of validations
+	1. Javascript
+		- immediate but user can easily circumvent it
+	2. Server (model - e.g. User)
+		- most validations can happen here
+		- more secure but has to take full round-trip HTTP request
+		- also, if your application scales up, it might cause problem if multiple instances of it on multiple servers. for example, two users requesting the same usernames at the same time.
+	3. Database level
+		- the only way to truly enforce constraints
+		- You can use extra parameters passed to some of the migration methods like `add_index` to say `add_index :users, :username, unique: true`
+
+<hr>
+#### Basic Associations
+
+- **one-to-many**: “has many / belongs to” association (a User `has_many` Post objects associated with it and a Post `belongs_to` a single User).
+	- A book belongs person A. Or a book belongs to multiple people.
+- **many-to-many**: "has and belongs to many" association.
+	- A dog has favorite humans A and B. A human has favorite dogs Y and Z.
+	- To keep track of all the relationships, tt actually requires you to create another table (a join table, or “through” table).
