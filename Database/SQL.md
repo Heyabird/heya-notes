@@ -219,17 +219,31 @@ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Cou
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 ```
 
+<hr>
+
 #### LIKE
 To select all customers with a CustomerName starting with "a":
 ```sql
 SELECT * FROM Customers  
 WHERE CustomerName LIKE 'a%';
 ```
+- % represents multiple characterse
+- _ represents one character
 
-#### ALIASES/AS
+#### COLUMN ALIAS
 ```sql
 SELECT column_name AS alias_name
 FROM table_name;
+```
+
+#### TABLE ALIAS
+```sql
+SELECT c.name, t.name  
+FROM character AS c  
+LEFT JOIN character_tv_show AS ct  
+ON c.id = ct.character_id  
+LEFT JOIN tv_show AS t  
+ON ct.tv_show_id = t.id;
 ```
 
 <hr>
@@ -334,3 +348,29 @@ FROM OrderDetails;
 
 <hr>
 - Khan Academy SQL practice: https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/pt/combining-multiple-joins
+
+## CASE
+```sql
+SELECT *,  
+CASE WHEN species = 'human' THEN 2 ELSE 4 END AS num_legs  
+FROM friends_of_pickles;
+```
+
+![[Screen Shot 2021-01-26 at 1.14.34 PM.png]]
+
+## SUBSTRING (SUBSTR)
+`SUBSTR(name, 1, 5)` is the first 5 characters of the name.  
+`SUBSTR(name, -4)` is the last 4 characters of the name.
+
+`SELECT * FROM robots WHERE SUBSTR(name, -4) LIKE '20__';` is another way of returning all of the robots that have been released between 2000 and 2099.
+
+## COALESCE 
+`COALESCE` takes a list of columns, and returns the value of the first column that is not null.
+If value of _gun_ is not null, that is the value returned. Otherwise, the value of _sword_ is returned. Then you would run:  
+`SELECT name, COALESCE(gun, sword) AS weapon FROM fighters;`
+
+<hr>
+
+SQL Exercise Resources
+- https://www.sqlteaching.com/#!coalesce
+- 
