@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rails/Active Record Basics.md",
+            "file": "Database/SQL.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rails/Active Record Basics.md",
+                "file": "Database/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,11 +86,11 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Database/SQL.md",
     "Rails/Active Record Basics.md",
     "Rails/Migration.md",
     "Rails/Untitled.md",
     "Rails/Active Record.md",
-    "Database/SQL.md",
     "System Design/Caching.md",
     "System Design/System Design.md",
     "Database/MySQL.md",

@@ -67,10 +67,25 @@ To view the table, you can run:
 DESCRIBE student;
 ```
 
+#### IF NOT EXISTS
+```sql
+CREATE TABLE IF NOT EXISTS mytable ( 
+	column DataType TableConstraint DEFAULT default_value,
+	another_column DataType TableConstraint DEFAULT default_value_, 
+	… 
+);
+```
+If there already exists a table with the same name, the SQL implementation will usually throw an error, so to suppress the error and skip creating a table if one exists, you can use the `IF NOT EXISTS` clause:
+
 #### Delete a Table
 ```sql
 DROP TABLE student;
 ```
+the database may throw an error if the specified table does not exist, and to suppress that error, you can use the `IF EXISTS` clause:
+```sql 
+DROP TABLE IF EXISTS mytable;
+```
+if you have another table that is dependent on columns in table you are removing (for example, with a `FOREIGN KEY` dependency) then you will have to either update all dependent tables first to remove the dependent rows or to remove those tables entirely.
 
 #### Modify a Table
 Add a column:
@@ -197,8 +212,9 @@ WHERE major <> 'Biology' OR name IN ('Claire', 'Kate', 'Mike');
 #### Limiting
 gives back specific number of rows.
 ```sql
-LIMIT 2;
+LIMIT 2 OFFSET 5; 
 ```
+**OFFSET** specifies wheere to begin counting
 
 #### Distinct
 ```sql
@@ -272,7 +288,12 @@ GROUP BY sex;
 ![[Screen Shot 2021-01-24 at 3.33.46 PM.png]]
 <hr>
 - MIN, MAX
-- HAVING = WHERE for aggregates
+- HAVING = WHERE for aggregates (comes after GROUP BY)
+```sql	
+	SELECT Role, SUM(Years_employed) FROM employees
+	GROUP BY Role
+	HAVING Role = 'Engineer';
+```
 
 ## Wild Card
 = a way of defining different patterns to match data to
@@ -371,6 +392,19 @@ If value of _gun_ is not null, that is the value returned. Otherwise, the value 
 
 <hr>
 
+## Order of Execution of a Query
+1. FROM annd JOINs
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. DISTINCT
+7. ORDER BY
+8. LIMIT / OFFSET
+
+<hr>
+
 SQL Exercise Resources
-- https://www.sqlteaching.com/#!coalesce
+- https://www.sqlteaching.com/
+- https://sqlbolt.com/lesson/select_queries_introduction
 - 
