@@ -124,6 +124,12 @@ If you didn't want to fill in data for all columns:
 INSERT INTO student(student_id, name) VALUES(2, 'Kate');
 ```
 
+#### INSERT ON DUPLICATE KEY UPDATE (Only on MySQL)
+When you insert a new row into a table if the row causes a duplicate in `[UNIQUE](https://www.mysqltutorial.org/mysql-unique/)` index or `[PRIMARY KEY](https://www.mysqltutorial.org/mysql-primary-key/)` , MySQL will issue an error.
+
+However, if you specify the `ON DUPLICATE KEY UPDATE` option in the `INSERT` statement, MySQL will [update](https://www.mysqltutorial.org/mysql-update-data.aspx) the existing row with the new values instead.
+
+
 #### Updating Rows
 
 To update:
