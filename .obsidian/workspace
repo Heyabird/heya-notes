@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "System Design/System Design.md",
-            "mode": "preview"
+            "file": "Javascript/Eloquent Javascript Notes.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "System Design/System Design.md",
+                "file": "Javascript/Eloquent Javascript Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "System Design/System Design.md",
+    "Javascript/Eloquent Javascript Notes.md",
     "System Design/Caching.md",
+    "System Design/System Design.md",
+    "Javascript/Untitled.md",
+    "Screen Shot 2021-01-25 at 9.24.50 PM.png",
     "Database/SQL.md",
     "Rails/Active Record Basics.md",
     "Database/Relational Database.md",
     "Database/MySQL.md",
-    "Database/SQL - Company DB Example.md",
-    "Rails/Migration.md",
-    "Rails/Untitled.md",
-    "Rails/Active Record.md"
+    "Database/SQL - Company DB Example.md"
   ]
 }
