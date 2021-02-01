@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "fe5d989d507c3418",
+        "id": "d0df0d5c19c6fb36",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Javascript/Eloquent Javascript Notes.md",
-            "mode": "source"
+            "file": "Liquid/Liquid Tags.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Javascript/Eloquent Javascript Notes.md",
+                "file": "Liquid/Liquid Tags.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Javascript/Eloquent Javascript Notes.md",
-    "System Design/Caching.md",
-    "System Design/System Design.md",
-    "Javascript/Untitled.md",
-    "Screen Shot 2021-01-25 at 9.24.50 PM.png",
-    "Database/SQL.md",
-    "Rails/Active Record Basics.md",
-    "Database/Relational Database.md",
-    "Database/MySQL.md",
-    "Database/SQL - Company DB Example.md"
+    "Liquid/Liquid Tags.md",
+    "Zournal/Untitled.md",
+    "Zournal/1.31.2021.md",
+    "Untitled.md",
+    "Liquid/Liquid Filters.md",
+    "Javascript/Knockout.js.md",
+    "Javascript/Eloquent Javascript ch1-3.md",
+    "Javascript/Eloquent Javascript ch4-6.md",
+    "Liquid/Liquid Basics.md",
+    "Liquid/Untitled.md"
   ]
 }

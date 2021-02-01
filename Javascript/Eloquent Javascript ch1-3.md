@@ -41,6 +41,8 @@ Operators
 	-  _short-circuit evaluation_ = the part to their right is evaluated only when necessary
 - Type (typeof, instanceof)
 
+<hr>
+
 # 2. Program Structure 
 - Expression - a fragment of code that produces a value.
 - Statement - full javascript "sentence", ended by a ';'.
@@ -120,8 +122,16 @@ Operators
 		```
 - Comments (//, /* */)
 
-# Function
--  A function definition is a regular binding where the value of the binding is a function.
+<hr>
+
+# 3. Functions
+#### Scopes
+- global - bindings created outside a function
+- local - bindings created inside a function
+- _lexical scoping_
+
+#### 1. Function definition/expression:
+-  = a regular binding where the value of the binding is a function.
 	```javascript
 	const square = function(x) {
 	  return x * x;
@@ -131,14 +141,95 @@ Operators
 	// → 144
 	```
 	- Functions as values: function and function name (square) are two different things.
--  Scopes
-	- global - bindings created outside a function
-	- local - bindings created inside a function
-	- _lexical scoping_
-- Declaration Notation:
-	```javascript
-	function square(x) {
-	  return x * x;
-	}
-	```
-	
+
+#### 2. Function declaration:
+
+```javascript
+function square(x) {
+  return x * x;
+}
+```
+- Function declarations are not part of the regular top-to-bottom flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope.
+```javascript
+console.log("The future says:", future());
+function future() {
+  return "You'll never have flying cars";
+}
+```
+			- The preceding code works, even though the function is defined below the code that uses it.
+#### 3. Arrow Functions
+
+```javascript
+const power = (base, exponent) => {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+	result *= base;
+  }
+  return result;
+};
+```
+- When there is only one parameter name, you can omit the parentheses around the parameter list. If the body is a single expression, rather than a block in braces, that expression will be returned from the function. So, these two definitions of `square` do the same thing:
+```javascript
+const square1 = (x) => { return x * x; };
+const square2 = x => x * x;
+```
+- Arrow functions were added in 2015, mostly to make it possible to write small function expressions in a less verbose way.
+- Differences between arrow and regular functions: https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/
+
+#### Call Stack 
+- Every time a function is called, the current context is stored on top of this stack.  When a function returns, it removes the top context from the stack and uses that context to continue execution.
+- Storing this stack requires space in the computer’s memory.
+
+#### Optional Arguments
+```javascript
+function square(x) { return x * x; }
+console.log(square(4, true, "hedgehog"));
+// → 16
+```
+- Arguments in JS: If you pass too many, the extra ones are ignored. If you pass too few, the missing parameters get assigned the value `undefined`.
+```javascript
+function minus(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(minus(10));
+// → -10
+console.log(minus(10, 5));
+// → 5
+```
+- Default argument value
+```javascript
+function power(base, exponent = 2) {
+...
+```
+
+#### Closure
+- = a function that references bindings from local scopes around it
+```javascript
+function multiplier(factor) {
+  return number => number * factor;
+}
+
+let twice = multiplier(2);
+console.log(twice(5));
+// → 10
+```
+- In the example, `multiplier` is called and creates an environment in which its `factor` parameter is bound to 2. The function value it returns, which is stored in `twice`, remembers this environment. So when that is called, it multiplies its argument by 2.
+
+#### Recursion
+- = a function calling itself
+```javascript
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+console.log(power(2, 3));
+// → 8
+```
+
+#### Growing Functions
