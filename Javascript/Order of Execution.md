@@ -1,0 +1,1 @@
+- JS is snychronous. This means that it will execute your code block by order after [hoisting](https://scotch.io/tutorials/understanding-hoisting-in-javascript). Before the code executes, `var` and `function` declarations are “hoisted” to the top of their scope.

@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "d0df0d5c19c6fb36",
+        "id": "8785be1e9e067109",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Liquid/Liquid Tags.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Liquid/Liquid Tags.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +82,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Liquid/Liquid Tags.md",
-    "Zournal/Untitled.md",
-    "Zournal/1.31.2021.md",
-    "Untitled.md",
-    "Liquid/Liquid Filters.md",
+    "Ruby/Untitled.md",
+    "Javascript/Order of Execution.md",
     "Javascript/Knockout.js.md",
-    "Javascript/Eloquent Javascript ch1-3.md",
     "Javascript/Eloquent Javascript ch4-6.md",
-    "Liquid/Liquid Basics.md",
-    "Liquid/Untitled.md"
+    "Javascript/Eloquent Javascript ch1-3.md",
+    "Zournal/1.31.2021.md",
+    "Zournal/Boundaries.md",
+    "Untitled.md",
+    "Liquid/Liquid Tags.md",
+    "Liquid/Liquid Filters.md"
   ]
 }
