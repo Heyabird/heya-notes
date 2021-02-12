@@ -4,12 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8785be1e9e067109",
+        "id": "c342ac9e8db33dea",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Javascript/Eloquent Javascript ch4-6.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Javascript/Eloquent Javascript ch4-6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Ruby/Untitled.md",
-    "Javascript/Order of Execution.md",
-    "Javascript/Knockout.js.md",
     "Javascript/Eloquent Javascript ch4-6.md",
     "Javascript/Eloquent Javascript ch1-3.md",
-    "Zournal/1.31.2021.md",
-    "Zournal/Boundaries.md",
-    "Untitled.md",
+    "Javascript/Knockout.js.md",
+    "Javascript/Order of Execution.md",
+    "Liquid/Liquid Filters.md",
     "Liquid/Liquid Tags.md",
-    "Liquid/Liquid Filters.md"
+    "Ruby/Basics.md",
+    "Liquid/Liquid Basics.md",
+    "Untitled.md",
+    "Ruby/Untitled.md"
   ]
 }

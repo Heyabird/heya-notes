@@ -157,6 +157,95 @@ console.log(name);
 ```
 `json.stringify` takes a JS value and returns a JSON-encoded string. `json.parse`  takes a JSON-encoded string and returns a JS value.
 
+<hr>
+
+# 5. Higher Order Functions
+Abstractions - hide details and give us the ability to talk about problems at a higher (or more abstract) level.
+
+#### Higher Order Functions
+ - allow us to abstract over _actions_, not just values.
+
+```javascript
+function greaterThan(n) {
+  return m => m > n;
+}
+let greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+// → true
+```
+
+- forEach
+```javascript
+["A", "B"].forEach(l => console.log(l));
+// → A
+// → B
+```
+
+#### Filtering arrays
+```javascript
+function filter(array, test) {
+  let passed = [];
+  for (let element of array) {
+    if (test(element)) {
+      passed.push(element);
+    }
+  }
+  return passed;
+}
+
+console.log(filter(SCRIPTS, script => script.living));
+// → [{name: "Adlam", …}, …]
+```
+```javascript
+console.log(SCRIPTS.filter(s => s.direction == "ttb"));
+// → [{name: "Mongolian", …}, …]
+```
+
+#### Transforming with Map
+```javascript
+function map(array, transform) {
+  let mapped \= \[\];
+  for (let element of array) {
+    mapped.push(transform(element));
+  }
+  return mapped;
+}
+```
+
+#### Summarizing with reduce (a.k.a. fold)
+```javascript
+function reduce(array, combine, start) {
+  let current = start;
+  for (let element of array) {
+    current = combine(current, element);
+  }
+  return current;
+}
+console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
+// → 10
+```
+- standard array method reduce
+	- If your array contains at least one element, you are allowed to leave off the `start` argument. The method will take the first element of the array as its start value and start reducing at the second element.
+	```javascript
+	console.log([1, 2, 3, 4].reduce((a, b) => a + b));
+	// → 10
+	```
+
+#### Some
+- tests whether any element matches a given predicate function
+```javascript
+	if (script.ranges.some(([from, to]) => {
+		  return code >= from && code < to;
+		})) {
+```
+#### FindIndex
+- finds the position of the first element that matches a predicate 
+```javascript
+    let known = counts.findIndex(c => c.name == name);
+```
+
+<hr>
+
 # 6. The Secret Life of Objects
 Object Oriented Programming
 #### Encapsulation
