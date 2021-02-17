@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "c342ac9e8db33dea",
+        "id": "2bdb06a5818e8bde",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Javascript/Eloquent Javascript ch4-6.md",
-            "mode": "preview"
+            "file": "Ruby/Object Oriented Programming.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Javascript/Eloquent Javascript ch4-6.md",
+                "file": "Ruby/Object Oriented Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Javascript/Eloquent Javascript ch4-6.md",
-    "Javascript/Eloquent Javascript ch1-3.md",
-    "Javascript/Knockout.js.md",
-    "Javascript/Order of Execution.md",
-    "Liquid/Liquid Filters.md",
-    "Liquid/Liquid Tags.md",
+    "Ruby/Object Oriented Programming.md",
+    "Ruby/Blocks, Procs, and Lambads.md",
     "Ruby/Basics.md",
-    "Liquid/Liquid Basics.md",
+    "Ruby/Untitled.md",
+    "Javascript/Knockout.js.md",
+    "System Design/System Design.md",
+    "System Design/Caching.md",
     "Untitled.md",
-    "Ruby/Untitled.md"
+    "Javascript/Eloquent Javascript ch4-6.md",
+    "Javascript/Eloquent Javascript ch1-3.md"
   ]
 }

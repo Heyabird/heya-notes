@@ -152,7 +152,7 @@ console.log(name);
 ```javascript 
 {
   "squirrel": false,
-  "events": \["work", "touched tree", "pizza", "running"\]
+  "events": ["work", "touched tree", "pizza", "running"\]
 }
 ```
 `json.stringify` takes a JS value and returns a JSON-encoded string. `json.parse`  takes a JSON-encoded string and returns a JS value.
@@ -204,7 +204,7 @@ console.log(SCRIPTS.filter(s => s.direction == "ttb"));
 #### Transforming with Map
 ```javascript
 function map(array, transform) {
-  let mapped \= \[\];
+  let mapped = [];
   for (let element of array) {
     mapped.push(transform(element));
   }
