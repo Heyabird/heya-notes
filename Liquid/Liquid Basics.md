@@ -8,7 +8,7 @@
 ```
 ^(object.property)
 
-#### Tags
+#### [[Liquid Tags]]
 **Tags** create the logic and control flow for templates
 ```liquid
 {% if user %}
@@ -16,7 +16,7 @@
 {% endif %}
 ```
 
-#### Filters
+#### [[Liquid Filters]]
 **Filters** change the output of a Liquid object. They are used within an output and are separated by a `|`.
 ```liquid
 {{ "/my/fancy/url" | append: ".html" }}

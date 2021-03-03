@@ -24,7 +24,7 @@
 
 <hr>
 
-## [[Migration]]
+## [[RoR Migration]]
 https://edgeguides.rubyonrails.org/active_record_migrations.html
 - = a script that tells Rails how you want to set up or change a database.
 	- each migration as being a new 'version' of the database

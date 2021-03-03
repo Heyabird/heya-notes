@@ -4,6 +4,7 @@
 src: https://www.youtube.com/watch?v=HXV3zeQKqGY
 - Database (DB)
 - Database management system (DBMS) - handles security, backups, importing/exporting data, concurrency, interacts with software apps / programming interfaces
+	- example: [[MySQL]]
 - C.R.U.D. (Create, Read, Update, Delete) are the 4 main operations we can do with a db.
 - 2 types of db:
 	- Relational (SQL)
