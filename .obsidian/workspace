@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Unix/CLI.md",
+            "file": "Linux/Linux Comand Line.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unix/CLI.md",
+                "file": "Linux/Linux Comand Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,6 +86,7 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Unix/Linux Comand Line.md",
     "Unix/CLI.md",
     "RoR - Ruby/Ruby Blocks, Procs, and Lambads.md",
     "RoR - Ruby/Ruby Basics.md",
@@ -94,7 +95,6 @@
     "RoR - Rails/Active Record.md",
     "Javascript/Knockout.js.md",
     "Javascript/JS Order of Execution.md",
-    "Javascript/Eloquent Javascript ch4-6.md",
-    "Javascript/Eloquent Javascript ch1-3.md"
+    "Javascript/Eloquent Javascript ch4-6.md"
   ]
 }
