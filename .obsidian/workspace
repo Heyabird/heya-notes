@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linux/Linux Comand Line.md",
+            "file": "Linux/Other useful CLI commands.md",
             "mode": "preview"
           }
         }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.0121879577637
+    "width": 510.0121879577637
   },
   "right": {
     "id": "a46e5e115286c0e1",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux Comand Line.md",
+                "file": "Linux/Other useful CLI commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Linux/Other useful CLI commands.md",
+    "Linux/Command Line Basics.md",
+    "Linux/Command Line Superuser.md",
+    "Linux/Linux Comand Line.md",
+    "Linux/Untitled.md",
     "Unix/Linux Comand Line.md",
     "Unix/CLI.md",
     "RoR - Ruby/Ruby Blocks, Procs, and Lambads.md",
     "RoR - Ruby/Ruby Basics.md",
-    "RoR - Ruby/Object Oriented Programming for Ruby.md",
-    "RoR - Rails/RoR Migration.md",
-    "RoR - Rails/Active Record.md",
-    "Javascript/Knockout.js.md",
-    "Javascript/JS Order of Execution.md",
-    "Javascript/Eloquent Javascript ch4-6.md"
+    "RoR - Ruby/Object Oriented Programming for Ruby.md"
   ]
 }

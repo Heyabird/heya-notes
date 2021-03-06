@@ -33,6 +33,47 @@ Brief history
 	- if you run that again, it will have same output, since shell clears out the file and restarts the process
 - `cat t* >> combined.txt` will append to, rather than replace, the file content
 	- `echo "i've appended a line!" >> combined.txt`
+ 
+ #### `mv` - Move 
+ - Into a directory:
+ 	`mv combined.txt dir1`
+ - Out of a directory (back to parent directory):
+ 	`mv combined.txt ..` or `mv dir1/* .` (move all files in dir1 to current directory `.`)
+ - Using more than one arguments (last argument is the destination directory and the rest are files being moved):
+	`mv combined.txt test_* dir3 dir2`
 
+#### Renaming 
+`mv 1_combined.txt combined_1.txt` 
 
- `whoami` - Show My Username
+#### `cp` - Copy
+`cp dir4/dir5/dir6/combined.txt .`
+`cp combined.txt backup_combined.txt` (copy with a new name)
+
+#### `rm`, `rmdir` - Remove/Delete
+- Removing files:
+	`rm dir4/dir5/dir6/combined.txt combined_backup.txt`
+- Removing directories:
+	`rmdir folder_*` - will only delete 1 empty directory
+	`rmdir -p dir1/dir2/dir3` - will delete all empty directories including its parents
+	`rmdir -r folder_6` - (recursive) will delete directory *and* all files in it (use with caution)
+	
+<hr>
+
+#### `|` - Piping
+- STDIN/STDOUT (standard input, standard output)
+
+`ls ~ | wc -l`
+- pipes out the output of first command into second; a temporary file is created
+- the above command is the shortened version of this:
+	```
+	ls ~ > file_list.txt
+	wc -l file_list.txt
+	rm file_list.txt
+	```
+- to count the number lines in a file (while removing adjacent matching lines), you can:
+	`cat combined.txt | uniq | wc -l`
+`man uniq` - see instruction manual of the command; press `q` to quit
+- `sort combined.text | less` to reorder lines (use `less` to view the file)
+
+<hr>
+
